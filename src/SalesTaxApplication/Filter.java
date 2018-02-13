@@ -1,12 +1,12 @@
 package SalesTaxApplication;
 
+
+//Filter class created so it need to change parse format
+//this class is a way to do so
 public class Filter {
 	
 	public String item;
-	
-	public Filter() {
-		//nothing to intialize 
-	}
+
 	
 	@SuppressWarnings("unused")
 	public boolean checkKeywords(String item) {

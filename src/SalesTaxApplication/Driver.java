@@ -7,7 +7,8 @@ public class Driver {
 	 * 
 	 */
 	public static void main(String[] args) {
-		ST_Application st_app = new ST_Application(0.10, 0.05);
+		//enter tax percentages in whole numbers
+		ST_Application st_app = new ST_Application(0.10,0.5);
 		st_app.intialprompt();
 	}
 }

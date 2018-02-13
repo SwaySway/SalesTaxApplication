@@ -42,8 +42,8 @@ public class ST_Item implements Item {
 	
 	public void calcTax() {
 		double totaltaxpercent = price * totaltax;
+		totaltaxpercent = (double) Math.round(totaltaxpercent * 20) / 20.0;
 		price = price + totaltaxpercent;
-		price = (double) Math.round(price * 200) / 200.0;
 		totaltax = totaltaxpercent;
 	}
 	public boolean checkImport() {
@@ -80,7 +80,7 @@ public class ST_Item implements Item {
 
 	public double getTax() {
 		// TODO Auto-generated method stub
-		totaltax = (double) Math.round(totaltax * 200) / 200.0;
+		totaltax = (double) Math.round(totaltax * 20) / 20.0;
 		return totaltax;
 	}
 

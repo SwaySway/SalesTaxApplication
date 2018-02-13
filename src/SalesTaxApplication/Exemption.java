@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Exemption {
 	
-	
+	//loads exemptions from file
 	public boolean checkExempt(String itemDescription) {
 		File exemptFile = new File("exempt.txt");
 		try {

@@ -8,6 +8,7 @@ import java.util.*;
  */
 public class ST_Calculator<T> implements Calculator {
 
+	//variables
 	private double taxrate;
 	
 	private double importTaxrate;
@@ -16,12 +17,12 @@ public class ST_Calculator<T> implements Calculator {
 	
 	private double totalTax;
 	
-	private ArrayList<T> items;
-	
+	//constructor for the class
 	public ST_Calculator(double taxrate, double importTaxrate) {
 		this.setTax(taxrate,importTaxrate);
 	}
 
+	//setter for the class
 	private void setTax(double taxrate, double importTaxrate) {
 		this.taxrate = taxrate;
 		this.importTaxrate = importTaxrate;
@@ -48,15 +49,19 @@ public class ST_Calculator<T> implements Calculator {
 		printTotal();
 	}
 	
-	
-	public double getTotal() {
-		return total;
+	//returns total
+	public String getTotal() {
+		NumberFormat df = new DecimalFormat("#0.00");
+		return df.format(total);
 	}
 	
-	public double getSalesTaxTotal() {
-		return totalTax;
+	//returns total sales tax
+	public String getSalesTaxTotal() {
+		NumberFormat df = new DecimalFormat("#0.00");
+		return df.format(totalTax);
 	}
 
+	//prints total at the end
 	@Override
 	public void printTotal() {
 		NumberFormat df = new DecimalFormat("#0.00");
@@ -64,6 +69,17 @@ public class ST_Calculator<T> implements Calculator {
 				+df.format(totalTax)+"\n"
 				+"Total: "+df.format(total));
 
+	}
+
+	//Clears the variables in calculator
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+		taxrate = 0;
+		importTaxrate = 0;
+		total = 0;
+		totalTax = 0;
+		
 	}
 
 }

@@ -3,8 +3,9 @@ package SalesTaxApplication;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ST_Application {
+public class ST_Application<T> {
 	
+	//variables
 	private Scanner kb;
 	
 	private double taxrate;
@@ -30,6 +31,7 @@ public class ST_Application {
 		System.out.println(prompt);
 		start();
 	}
+	
 	public void start() {
 				String input = null;
 				kb = new Scanner(System.in);
